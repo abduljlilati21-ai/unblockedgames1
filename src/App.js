@@ -23,7 +23,7 @@ import AddGameModal from "./components/AddGameModal";
 import JsonViewModal from "./components/JsonViewModal";
 import CloakModal, { applyCloak } from "./components/CloakModal";
 
-const STORAGE_KEY = "novaplay_games_v3";
+const STORAGE_KEY = "novaplay_games_v6";
 const FAVORITES_KEY = "novaplay_favorites_v1";
 
 export default function App() {
@@ -32,14 +32,14 @@ export default function App() {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved !== null) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) {
+        if (Array.isArray(parsed)) {
           return parsed;
         }
       }
     } catch {
       // Ignore parse errors
     }
-    return defaultGamesData;
+    return defaultGamesData || [];
   });
 
   const [favorites, setFavorites] = useState(() => {
@@ -471,22 +471,13 @@ export default function App() {
 
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <button
-                type="button"
-                onClick={handleResetDefaults}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-neutral-950 font-bold text-xs shadow-lg transition-transform hover:scale-105"
-              >
-                <RotateCcw className="h-4 w-4" />
-                <span>Restore Curated Games (12)</span>
-              </button>
-
-              <button
                 id="empty-add-game-btn"
                 type="button"
                 onClick={() => setIsAddModalOpen(true)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-neutral-800 hover:bg-neutral-700 border border-white/10 text-neutral-200 font-semibold text-xs transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-neutral-950 font-bold text-xs shadow-lg transition-transform hover:scale-105"
               >
                 <Plus className="h-4 w-4" />
-                <span>Add Custom Game</span>
+                <span>Add Your First Game</span>
               </button>
 
               <button

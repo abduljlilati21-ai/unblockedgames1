@@ -38,10 +38,20 @@ export default function GameView({
     return game.url || "";
   }, [game]);
 
+  const sandboxAttr = useMemo(() => {
+    if (game.iframe) {
+      const match = game.iframe.match(/sandbox=["']([^"']+)["']/i);
+      if (match && match[1]) {
+        return match[1];
+      }
+    }
+    return "allow-scripts allow-pointer-lock allow-forms allow-same-origin allow-downloads allow-popups allow-popups-to-escape-sandbox";
+  }, [game]);
+
   const rawIframeTag = useMemo(() => {
     if (game.iframe) return game.iframe;
-    return `<iframe src="${gameSrc}" title="${game.title}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; keyboard; gamepad" allowfullscreen></iframe>`;
-  }, [game, gameSrc]);
+    return `<iframe src="${gameSrc}" title="${game.title}" width="100%" height="100%" frameborder="0" sandbox="${sandboxAttr}" allow="autoplay; fullscreen; keyboard; gamepad; pointer-lock" allowfullscreen></iframe>`;
+  }, [game, gameSrc, sandboxAttr]);
 
   // Find index for next/previous navigation
   const currentIndex = useMemo(() => {
@@ -287,7 +297,8 @@ export default function GameView({
                 src={gameSrc}
                 title={game.title}
                 className="h-full w-full border-0 block flex-1 bg-black"
-                allow="autoplay; fullscreen; keyboard; gamepad; clipboard-read; clipboard-write"
+                sandbox={sandboxAttr}
+                allow="autoplay; fullscreen; keyboard; gamepad; clipboard-read; clipboard-write; pointer-lock"
                 loading="eager"
               />
             ) : (

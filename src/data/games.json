@@ -1,110 +1,11 @@
 [
   {
-    "id": "hextris",
-    "title": "Hextris",
-    "category": "Arcade",
-    "description": "Fast-paced hexagonal puzzle inspired by Tetris. Rotate the hexagon to match 3 colors.",
-    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
-    "url": "https://hextris.io/",
-    "iframe": "<iframe src=\"https://hextris.io/\" title=\"Hextris\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "2048",
-    "title": "2048 Classic",
-    "category": "Puzzle",
-    "description": "Slide matching number tiles together to double their value and reach the legendary 2048 tile.",
-    "thumbnail": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
-    "url": "https://play2048.co/",
-    "iframe": "<iframe src=\"https://play2048.co/\" title=\"2048 Classic\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "snake-retro",
-    "title": "Retro Snake",
-    "category": "Arcade",
-    "description": "Guide the hungry snake to eat glowing apples, grow longer, and avoid running into yourself or walls.",
-    "thumbnail": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=600&auto=format&fit=crop&q=80",
-    "url": "https://playsnake.org/",
-    "iframe": "<iframe src=\"https://playsnake.org/\" title=\"Retro Snake\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "flappy-bird",
-    "title": "Flappy Bird",
-    "category": "Arcade",
-    "description": "Tap or press spacebar to flap wings and navigate through tricky green pipes without crashing.",
-    "thumbnail": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80",
-    "url": "https://flappybird.io/",
-    "iframe": "<iframe src=\"https://flappybird.io/\" title=\"Flappy Bird\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "tetris-classic",
-    "title": "Block Stacker",
-    "category": "Puzzle",
-    "description": "Rotate falling tetromino blocks to complete solid horizontal lines and clear the board.",
-    "thumbnail": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop&q=80",
-    "url": "https://chvin.github.io/react-tetris/",
-    "iframe": "<iframe src=\"https://chvin.github.io/react-tetris/\" title=\"Block Stacker\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "breakout",
-    "title": "Brick Breaker Deluxe",
-    "category": "Arcade",
-    "description": "Bounce the ball with your paddle to smash through colored bricks and rack up high scores.",
-    "thumbnail": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&auto=format&fit=crop&q=80",
-    "url": "https://elgoog.im/breakout/",
-    "iframe": "<iframe src=\"https://elgoog.im/breakout/\" title=\"Brick Breaker Deluxe\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "pacman-retro",
-    "title": "Pac-Maze Classic",
-    "category": "Retro",
-    "description": "Munch on dots, avoid ghost monsters Blinky, Pinky, Inky, and Clyde, and grab power pellets.",
-    "thumbnail": "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?w=600&auto=format&fit=crop&q=80",
-    "url": "https://freepacman.org/",
-    "iframe": "<iframe src=\"https://freepacman.org/\" title=\"Pac-Maze Classic\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "minesweeper",
-    "title": "Minesweeper",
-    "category": "Puzzle",
-    "description": "Use logic to flag hidden explosive mines and uncover safe tiles across the grid.",
-    "thumbnail": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=600&auto=format&fit=crop&q=80",
-    "url": "https://minesweeperonline.com/",
-    "iframe": "<iframe src=\"https://minesweeperonline.com/\" title=\"Minesweeper\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "dino-run",
-    "title": "T-Rex Chrome Runner",
+    "id": "highway-racer-2",
+    "title": "Highway Racer 2",
     "category": "Action",
-    "description": "Jump over cacti and dodge flying pterodactyls in the famous offline dinosaur endless runner.",
-    "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80",
-    "url": "https://elgoog.im/t-rex/",
-    "iframe": "<iframe src=\"https://elgoog.im/t-rex/\" title=\"T-Rex Chrome Runner\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "space-invaders",
-    "title": "Space Invaders",
-    "category": "Action",
-    "description": "Defend the earth from descending waves of alien invaders using laser cannons and bunker shields.",
-    "thumbnail": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80",
-    "url": "https://elgoog.im/space-invaders/",
-    "iframe": "<iframe src=\"https://elgoog.im/space-invaders/\" title=\"Space Invaders\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "pong-classic",
-    "title": "Retro Pong",
-    "category": "Retro",
-    "description": "The quintessential arcade table tennis game. Battle against the paddle AI and keep the rally alive.",
-    "thumbnail": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&auto=format&fit=crop&q=80",
-    "url": "https://elgoog.im/pong/",
-    "iframe": "<iframe src=\"https://elgoog.im/pong/\" title=\"Retro Pong\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
-  },
-  {
-    "id": "tic-tac-toe",
-    "title": "Tic Tac Toe Impossible",
-    "category": "Puzzle",
-    "description": "Classic 3x3 naughts and crosses. Test your wits against the min-max algorithm or play with a friend.",
-    "thumbnail": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=600&auto=format&fit=crop&q=80",
-    "url": "https://playtictactoe.org/",
-    "iframe": "<iframe src=\"https://playtictactoe.org/\" title=\"Tic Tac Toe Impossible\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
+    "description": "High-speed 3D highway racing game. Dodge dense traffic, overtake vehicles at full speed, and customize your supercars across dynamic highways.",
+    "thumbnail": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=600&auto=format&fit=crop&q=80",
+    "url": "https://petezahgames.com/storage/ag/originals/highway-race2/index.html",
+    "iframe": "<iframe src=\"https://petezahgames.com/storage/ag/originals/highway-race2/index.html\" sandbox=\"allow-scripts allow-pointer-lock allow-forms allow-same-origin allow-downloads allow-popups allow-popups-to-escape-sandbox\" title=\"Highway Racer 2\" style=\"width: 100%; height: 100%; border: none; display: block;\" allow=\"autoplay; fullscreen; keyboard; gamepad\" allowfullscreen></iframe>"
   }
 ]
