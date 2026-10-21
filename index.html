@@ -15,6 +15,18 @@
         }
       })();
     </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19.0.0",
+          "react/jsx-runtime": "https://esm.sh/react@19.0.0/jsx-runtime",
+          "react-dom": "https://esm.sh/react-dom@19.0.0",
+          "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+          "lucide-react": "https://esm.sh/lucide-react@0.546.0?external=react",
+          "motion/react": "https://esm.sh/motion@12.23.24/react?external=react"
+        }
+      }
+    </script>
     <title>NovaPlay Unblocked</title>
     <meta name="description" content="A clean, fast unblocked web games portal with embedded iframe games." />
     <meta property="og:title" content="NovaPlay Unblocked" />
@@ -33,27 +45,28 @@
       </noscript>
     </div>
 
-    <!-- Primary entry point for Vite dev server and bundler -->
-    <script type="module" src="./src/main.js"></script>
-
-    <!-- Fallback loader for static hosting (e.g. GitHub Pages root branch deployment) -->
+    <!-- Smart script loader: loads pre-bundled assets on GitHub Pages static hosting, or src/main.js in Vite dev server -->
     <script>
-      setTimeout(function() {
-        var root = document.getElementById('root');
-        if (root && (!root.children.length || root.innerHTML.indexOf('JavaScript is required') !== -1)) {
-          if (!document.querySelector('link[href*="app.css"]')) {
-            var css = document.createElement('link');
-            css.rel = 'stylesheet';
-            css.href = './assets/app.css';
-            document.head.appendChild(css);
-          }
-          var script = document.createElement('script');
-          script.type = 'module';
-          script.crossOrigin = 'anonymous';
-          script.src = './assets/app.js';
-          document.body.appendChild(script);
+      (function() {
+        var isDev = window.location.port === '3000' || !!window.__vite_plugin_react_preamble_installed__;
+        if (isDev) {
+          var devScript = document.createElement('script');
+          devScript.type = 'module';
+          devScript.src = './src/main.js';
+          document.body.appendChild(devScript);
+        } else {
+          var css = document.createElement('link');
+          css.rel = 'stylesheet';
+          css.href = './assets/app.css';
+          document.head.appendChild(css);
+
+          var prodScript = document.createElement('script');
+          prodScript.type = 'module';
+          prodScript.crossOrigin = 'anonymous';
+          prodScript.src = './assets/app.js';
+          document.body.appendChild(prodScript);
         }
-      }, 100);
+      })();
     </script>
   </body>
 </html>

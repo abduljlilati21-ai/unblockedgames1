@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build && cp dist/index.html dist/404.html && (cp dist/assets/index.css dist/assets/app.css 2>/dev/null || true) && (rm -rf assets && cp -r dist/assets . 2>/dev/null || true)",
+    "build": "vite build && cp dist/index.html dist/404.html && (cp dist/assets/*.js dist/assets/app.js 2>/dev/null || true) && (cp dist/assets/*.js dist/assets/main.js 2>/dev/null || true) && (cp dist/assets/index.css dist/assets/app.css 2>/dev/null || true) && (rm -rf assets && cp -r dist/assets . 2>/dev/null || true)",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "echo 'No lint script configured'"
