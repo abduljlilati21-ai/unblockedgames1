@@ -7,7 +7,22 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
     base: './',
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      {
+        name: 'force-js-mime-type',
+        configureServer(server) {
+          server.middlewares.use((req, res, next) => {
+            const url = req.url || '';
+            if (url.endsWith('.jsx') || url.includes('.jsx?')) {
+              res.setHeader('Content-Type', 'text/javascript');
+            }
+            next();
+          });
+        },
+      },
+      react(),
+      tailwindcss(),
+    ],
     esbuild: {
       loader: 'jsx',
       include: /src\/.*\.jsx?$/,
