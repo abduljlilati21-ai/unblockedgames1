@@ -6,6 +6,15 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
+    <script>
+      // Ensure trailing slash on GitHub Pages directory so relative asset paths never 404
+      (function() {
+        var path = window.location.pathname;
+        if (path && path.length > 1 && path.slice(-1) !== '/' && !path.split('/').pop().includes('.')) {
+          window.location.replace(path + '/' + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
     <title>NovaPlay Unblocked</title>
     <meta name="description" content="A clean, fast unblocked web games portal with embedded iframe games." />
     <meta property="og:title" content="NovaPlay Unblocked" />
@@ -23,6 +32,28 @@
         </div>
       </noscript>
     </div>
+
+    <!-- Primary entry point for Vite dev server and bundler -->
     <script type="module" src="./src/main.js"></script>
+
+    <!-- Fallback loader for static hosting (e.g. GitHub Pages root branch deployment) -->
+    <script>
+      setTimeout(function() {
+        var root = document.getElementById('root');
+        if (root && (!root.children.length || root.innerHTML.indexOf('JavaScript is required') !== -1)) {
+          if (!document.querySelector('link[href*="app.css"]')) {
+            var css = document.createElement('link');
+            css.rel = 'stylesheet';
+            css.href = './assets/app.css';
+            document.head.appendChild(css);
+          }
+          var script = document.createElement('script');
+          script.type = 'module';
+          script.crossOrigin = 'anonymous';
+          script.src = './assets/app.js';
+          document.body.appendChild(script);
+        }
+      }, 100);
+    </script>
   </body>
 </html>

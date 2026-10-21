@@ -5,9 +5,10 @@ import { defineConfig, loadEnv } from 'vite';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
-  const base = process.env.GITHUB_REPOSITORY
-    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`
-    : process.env.BASE_URL || './';
+  const repo = process.env.GITHUB_REPOSITORY
+    ? process.env.GITHUB_REPOSITORY.split('/')[1]
+    : '';
+  const base = repo ? `/${repo}/` : process.env.BASE_URL || './';
 
   return {
     base,
@@ -27,6 +28,16 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
     ],
+    build: {
+      outDir: 'dist',
+      rollupOptions: {
+        output: {
+          entryFileNames: 'assets/app.js',
+          chunkFileNames: 'assets/[name].js',
+          assetFileNames: 'assets/[name].[ext]',
+        },
+      },
+    },
     esbuild: {
       loader: 'jsx',
       include: /src\/.*\.jsx?$/,
